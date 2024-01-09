@@ -4,7 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run",
+    "cy:chrome:desktop": "cypress run --headed --browser chrome -C cypress.config.js",
+    "cy:chrome:laptop": "cypress run --headed --browser chrome -C cypress.laptop.config.js",
+    "cy:chrome:mobile": "cypress run --headed --browser chrome -C cypress.mobile.config.js",
+    "cy:chrome:headless:desktop": "cypress run --headless --browser chrome -C cypress.config.js",
+    "cy:chrome:headless:laptop": "cypress run --headless --browser chrome -C cypress.laptop.config.js",
+    "cy:chrome:headless:mobile": "cypress run --headless --browser chrome -C cypress.mobile.config.js",
+    "cy:firefox:desktop": "cypress run --headed --browser firefox -C cypress.config.js",
+    "cy:firefox:headless:desktop": "cypress run --headless --browser firefox -C cypress.config.js"
   },
   "author": "",
   "license": "ISC",
